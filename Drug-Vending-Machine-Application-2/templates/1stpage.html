@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <title>Automatic Drug Dispenser</title>
+<head>
+    <style>
+       
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        
+        img {
+            max-width: 100%; 
+        }
+
+       
+        .title-bar {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+        }
+
+       
+        h1 {
+            font-size: 24px;
+        }
+
+        
+        .button-container {
+            position: absolute;
+            bottom: 5in; 
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: row;
+            gap: 10px; 
+        }
+
+       
+        .button {
+            padding: 20px 40px; 
+        }
+
+        
+        .service-button {
+            text-decoration: none;
+            padding: 20px 40px;
+            background-color: #135295; 
+            color: white; 
+            border: none;
+            cursor: pointer;
+        }
+
+        .service-button:hover {
+            background-color: #1258a3; 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='bg1.jpg') }}" alt="An image">
+
+
+        <div class="title-bar">
+            <h1>Automatic Drug Dispenser</h1>
+        </div>
+
+        <div class="button-container">
+            <button type="button" class="btn btn-warning button">Patient</button>
+            <a href="{{ url_for('IIndpage') }}" class="service-button">Service</a>
+
+        </div>
+    </div>
+</body>
+
+</html>
